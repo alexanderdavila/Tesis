@@ -450,7 +450,7 @@ def cnn():
   contact_features = Dense(8,activation='relu')(contact_features)
   contact_features = Dense(4,activation='softmax')(contact_features)
 
-  model = Model(inputs = [matriz_a,matriz_b,distance,SVA,SVR,pssmatrix], outputs = [contact_features], name='ResNet')
+  model = Model(inputs = [matriz_a,matriz_b,distance,SVA,SVR,pssmatrix], outputs = [contact_features], name='ClassNet')
   model.summary()
 
   return model
